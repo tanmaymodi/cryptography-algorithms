@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNS Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        
+       
+
+
+       
+
+
+
+
+        <div class="application" style="display: flex;" >
+            <div class="encryption">
+                <h3 class="bichme">Encryption</h3>
+                <hr>
+                <textarea name="input-text" id="input-text" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <div style="display:inline">
+                    letter difference
+                    <input type="number" id="letter-difference" name="letter-difference" min="1" max="25" value="1">
+                    <button onclick="Print()">Print</button>
+                </div>
+                
+                <br>
+                <br>
+
+
+                
+                <p><strong>Encrypted Text:</strong></p>
+                <textarea name="output-section" id="output-section" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <button onclick='copyText("output-section")'>Copy</button>
+                
+
+                <br><br>
+            </div>
+            <div class="descryption">
+                <h3 class="bichme">Decryption</h3>
+                <hr>
+                <textarea name="input-text-d" id="input-text-d" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <div style="display:inline">
+                    letter difference
+                    <input type="number" id="letter-difference-d" name="letter-difference-d" min="1" max="25" value="1">
+                    <button onclick="PrintDecryption()">Print</button>
+                </div>
+                
+                <br>
+                <br>
+
+
+                
+                <p><strong>Encrypted Text:</strong></p>
+                <textarea name="output-section-d" id="output-section-d" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <button onclick='copyText("output-section-d")'>Copy</button>
+
+
+                <br><br>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+        <!-- scripts -->
+        <script src="main.js"></script>
+</body>
+</html>
