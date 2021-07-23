@@ -9,14 +9,15 @@
 </head>
 <body>
         
-       
+       <label for="algo">Choose Encryption Algorithm</label>
+        <select name="algo" id="algo">    
+            <option value="one">Vigenère Cipher</option>
+            <option value="two">Caesar Cipher</option>
+        </select>
+        <button onclick="ag()">Enter</button>
+        
 
-
-       
-
-
-
-
+       <div id="one" style="display: none;">
         <div class="application" style="display: flex;" >
             <div class="encryption">
                 <h3 class="bichme">Encryption</h3>
@@ -68,6 +69,69 @@
             </div>
             
         </div>
+       </div>
+
+
+
+       <div id="two">
+
+
+
+<div class="application" style="display: flex;" >
+            <div class="encryption">
+                <h3 class="bichme">Encryption</h3>
+                <hr>
+                <textarea name="vce_text" id="vce_text" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <label for="vce_key">key</label>
+                <input type="text" id="vce_key" name="vce_key" onchange="crackTimePrediction()">
+                <button onclick="encrypt_vce()" >encrypt</button>
+                <br>
+                <p id="crackTime">Time to crack key: </p>
+                
+
+
+                
+                <p><strong>Encrypted Text:</strong></p>
+                <textarea name="vce_output" id="vce_output" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <button onclick='copyText("vce_output")'>Copy</button>
+                
+
+                <br><br>
+            </div>
+            <div class="descryption">
+                <h3 class="bichme">Decryption</h3>
+                <hr>
+                <textarea name="vce_text_d" id="vce_text_d" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <label for="vce_key_d">key</label>
+                <input type="text" id="vce_key_d" name="vce_key_d">
+                <button onclick="decrypt_vce()" >decrypt</button>
+                
+                <br>
+                <br>
+                <br>
+
+
+                
+                <p><strong>Encrypted Text:</strong></p>
+                <textarea name="vce_output_d" id="vce_output_d" class="text-area" cols="50" rows="10"></textarea>
+                <br>
+                <button onclick='copyText("vce_output_d")'>Copy</button>
+
+
+                <br><br>
+            </div>
+            
+        </div>
+
+       </div>
+
+
+
+
+        
 
 
 
@@ -76,5 +140,6 @@
 
         <!-- scripts -->
         <script src="main.js"></script>
+        <script src="vigenereCipher.js"></script>
 </body>
 </html>

@@ -92,3 +92,15 @@ function copyText(textAreaName) {
   document.execCommand("copy");
   alert("Text Copied");
 }
+
+function ag() {
+  var val = document.getElementById("algo").value;
+  if (val == "one") {
+    document.getElementById("one").style.display = "none";
+    document.getElementById("two").style.display = "block";
+  } else if (val == "two") {
+    document.getElementById("one").style.display = "block";
+    document.getElementById("two").style.display = "none";
+  }
+  document.getElementById("yyy").innerHTML = val;
+}
